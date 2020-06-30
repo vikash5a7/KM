@@ -1,107 +1,88 @@
+<ion-header [translucent]="true">
+    <ion-toolbar>
+        <ion-title>
+            vikash_kumar
+        </ion-title>
+        <ion-buttons slot="end">
+            <ion-button color="dark">
+                <ion-icon slot="icon-only" name="menu"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+
+</ion-header>
 <ion-content>
+    <br>
+    <ion-item lines="none">
+        <ion-label>
+            <h1><b>Vikash kumar</b></h1>
+        </ion-label>
+        <ion-avatar>
+            <img src="../../assets/13.jpg">
+        </ion-avatar>
+    </ion-item>
 
-    <div class="header">
-        <h2>Vikash kumar</h2>
-
-        <div class="space-between">
-            <div class="followings">
-                <ion-badge color="primary" mode="ios">42</ion-badge>
-                <p>Points</p>
-            </div>
-
-            <div class="followings">
-                <ion-badge color="primary" mode="ios">102</ion-badge>
-                <p>Following</p>
-            </div>
+    <div class="info_box">
+        <div class="date_box">
+            <b>245</b>
+            <p>posts</p>
         </div>
-
-    </div>
-    <div class="flex">
-        <div class="border-blue">
-            <div class="border-white">
-                <div class="img-box">
-                    <img src="../../assets/avatar-han.jpg">
-                </div>
-            </div>
+        <div class="date_box">
+            <b>7850</b>
+            <p>followers</p>
+        </div>
+        <div class="date_box">
+            <b>715</b>
+            <p>following</p>
+        </div>
+        <div class="date_box">
+            <b>715</b>
+            <p>Points</p>
         </div>
     </div>
+    <ion-button class="text_button" shape="round" size="small">Edit profile</ion-button>
+    <ion-button class="icon_button" shape="round" size="small" fill="outline" color="medium">
+        <ion-icon color="dark" slot="icon-only" name="contact"></ion-icon>
+        <ion-icon color="dark" slot="icon-only" name="checkmark"></ion-icon>
+    </ion-button>
+    <ion-button class="icon_button" shape="round" size="small" fill="outline" color="medium">
+        <ion-icon color="dark" slot="icon-only" name="arrow-dropdown"></ion-icon>
+    </ion-button>
 
-    <ion-card>
-        <ion-item lines="none">
-            <ion-avatar slot="start">
-                <img src="../../assets/avatar-han.jpg" />
-            </ion-avatar>
-            <ion-label>
-                <h2><b>Elon Musk</b></h2>
-                <p>Il y a 14 heures</p>
-            </ion-label>
-        </ion-item>
-        <ion-item lines="none" class="tweet">
-            <ion-label text-wrap>Production version will be a lot more polished than this prototype, but still fun to see</ion-label>
-        </ion-item>
-        <ion-button size="small" fill="clear" (click)="onClick()">
-            <ion-icon slot="start" name="text"></ion-icon> 34
-        </ion-button>
-        <ion-button size="small" fill="clear" (click)="onClick()">
-            <ion-icon slot="start" name="repeat"></ion-icon> 116
-        </ion-button>
-        <ion-button size="small" fill="clear" (click)="onClick()">
-            <ion-icon slot="start" name="heart-empty"></ion-icon> 210
-        </ion-button>
-    </ion-card>
-
-
-
-    <ion-card>
-        <ion-item lines="none">
-            <ion-avatar slot="start">
-                <img src="../../assets/avatar-han.jpg" />
-            </ion-avatar>
-            <ion-label>
-                <h2><b>Elon Musk</b></h2>
-                <p>Il y a 23 min</p>
-            </ion-label>
-        </ion-item>
-        <ion-item lines="none" class="tweet">
-            <ion-label text-wrap>Production version will be a lot more polished than this prototype, but still fun to see</ion-label>
-        </ion-item>
-        <img class="tweet-img" src="https://pbs.twimg.com/media/EFfmFEEU8AA1SmA?format=jpg&name=medium" />
-        <ion-button size="small" fill="clear">
-            <ion-icon slot="start" name="text"></ion-icon>
-            34
-        </ion-button>
-        <ion-button size="small" fill="clear">
-            <ion-icon slot="start" name="repeat"></ion-icon>
-            67
-        </ion-button>
-        <ion-button size="small" fill="clear">
-            <ion-icon slot="start" name="heart-empty"></ion-icon>
-            298
-        </ion-button>
-    </ion-card>
-
-    <ion-card>
-        <ion-item lines="none">
-            <ion-avatar slot="start">
-                <img src="../../assets/avatar-han.jpg" />
-            </ion-avatar>
-            <ion-label>
-                <h2><b>Elon Musk</b></h2>
-                <p>Il y a 14 heures</p>
-            </ion-label>
-        </ion-item>
-        <ion-item lines="none" class="tweet">
-            <ion-label text-wrap>Starship at our launch facility in Cameron County, Texas. Watch as <i>@elonmusk</i> gives an update on the vehicle today at ~7:00 p.m. CDT → <i>http://spacex.com/webcast</i></ion-label>
-        </ion-item>
-        <img class="tweet-img" src="https://pbs.twimg.com/media/EFjhHzwUEAIM2n_?format=jpg&name=medium">
-        <ion-button size="small" fill="clear" (click)="onClick()">
-            <ion-icon slot="start" name="text"></ion-icon> 34
-        </ion-button>
-        <ion-button size="small" fill="clear" (click)="onClick()">
-            <ion-icon slot="start" name="repeat"></ion-icon> 116
-        </ion-button>
-        <ion-button size="small" fill="clear" (click)="onClick()">
-            <ion-icon slot="start" name="heart-empty"></ion-icon> 210
-        </ion-button>
-    </ion-card>
+    <ion-item lines="none">
+        <ion-label>
+            <h3><b>Alise Smith</b>
+                <ion-icon color="primary" name="checkmark-circle"></ion-icon>
+            </h3>
+            <p>Fashion-designer, London UK</p>
+        </ion-label>
+    </ion-item>
+    <ion-segment color="medium">
+        <ion-segment-button>
+            <ion-icon name="keypad"></ion-icon>
+        </ion-segment-button>
+        <ion-segment-button>
+            <ion-icon name="list"></ion-icon>
+        </ion-segment-button>
+        <ion-segment-button>
+            <ion-icon name="heart-outline"></ion-icon>
+        </ion-segment-button>
+    </ion-segment>
+    <div class="grid">
+        <div class="img_box" style="background-image: url('../../assets/post_1.jpg');"></div>
+        <div class="img_box" style="background-image: url('../../assets/post_2.jpg');"></div>
+        <div class="img_box" style="background-image: url('../../assets/post_3.png');"></div>
+        <div class="img_box" style="background-image: url('../../assets/post_4.jpg');"></div>
+        <div class="img_box" style="background-image: url('../../assets/post_5.jpg');"></div>
+        <div class="img_box" style="background-image: url('../../assets/post_6.jpg');"></div>
+        <div class="img_box" style="background-image: url('../../assets/post_7.jpg');"></div>
+        <div class="img_box" style="background-image: url('../../assets/post_8.jpg');"></div>
+        <div class="img_box" style="background-image: url('../../assets/post_9.jpg');"></div>
+        <div class="img_box" style="background-image: url('../../assets/post_10.jpg');"></div>
+        <div class="img_box" style="background-image: url('../../assets/post_11.jpeg');"></div>
+        <div class="img_box" style="background-image: url('../../assets/post_12.jpg');"></div>
+        <div class="img_box" style="background-image: url('../../assets/post_13.jpg');"></div>
+        <div class="img_box" style="background-image: url('../../assets/post_14.jpg');"></div>
+        <div class="img_box" style="background-image: url('../../assets/post_15.jpg');"></div>
+    </div>
 </ion-content>

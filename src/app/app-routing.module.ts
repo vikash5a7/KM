@@ -10,6 +10,14 @@ const routes: Routes = [
     path: 'conversation',
     loadChildren: () => import('./pages/conversation/conversation.module').then( m => m.ConversationPageModule)
   },
+  {
+    path: 'login',
+    loadChildren: () => import('./auth/login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'register',
+    loadChildren: () => import('./auth/register/register.module').then( m => m.RegisterPageModule)
+  },
 ];
 @NgModule({
   imports: [

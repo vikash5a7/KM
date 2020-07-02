@@ -1,5 +1,8 @@
 {
   "name": "KnowMe",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
   "type": "angular"
 }

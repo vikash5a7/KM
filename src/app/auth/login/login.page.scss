@@ -11,7 +11,7 @@
 }
 
 .logo img {
-    height: 100px;
+    height: 150px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -24,8 +24,8 @@
 }
 
 ion-content {
-    --ion-background-color: linear-gradient(#6DD5FA, #2980B9);
-    // --ion-background-color: linear-gradient(#f5af19, #f12711);
+    // --ion-background-color: linear-gradient(#6DD5FA, #2980B9);
+    --ion-background-color: linear-gradient(#f5af19, #f12711);
     // --ion-background-color: linear-gradient(#485563, #29323c);
 }
 

@@ -1,17 +1,17 @@
 .padding {
     padding: 5%!important;
+    overflow: hidden;
 }
 
 .logo ion-icon {
     font-size: 9em;
     position: absolute;
-    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
 .logo img {
-    height: 150px;
+    height: 170px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -19,8 +19,9 @@
 }
 
 .logo {
+    padding-top: 50%;
     position: relative;
-    height: 250px;
+    height: 150px;
 }
 
 ion-content {

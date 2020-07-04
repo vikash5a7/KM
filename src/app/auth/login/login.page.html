@@ -1,4 +1,4 @@
-<ion-content>
+<ion-content style="overflow: hidden; height: 100%;">
     <div class="padding">
 
         <div class="logo">
@@ -36,7 +36,7 @@
                 <ion-icon slot="start" name="logo-facebook"></ion-icon>
                 Facebook
             </ion-button>
-            <ion-button color="google" color="youtube" shape="round">
+            <ion-button color="google" color="youtube" (click)="SingUpWithGoogle()" shape="round">
                 <ion-icon slot="start" name="logo-google"></ion-icon>
                 Google
             </ion-button>

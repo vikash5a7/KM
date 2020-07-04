@@ -42,10 +42,28 @@ export class LoginPage implements OnInit {
     this.router.navigate(['/register']);
   }
   loginWithFb() {
-    this.authService.loginWithFaceboo().then(res => {
+    this.common.loadingPresent('please wait....');
+    this.authService.loginWithFacebook().then(res => {
+      console.log('response', res);
+      this.common.loadingDismiss();
+      this.router.navigate(['/register']);
+      this.common.toastShow('Logged in', 'success');
+    }).catch(error => {
+      console.log('error', error);
+      this.common.loadingDismiss();
+      this.common.toastShow(error.message, 'danger');
+    });
+  }
+  SingUpWithGoogle() {
+    this.common.loadingPresent('please wait....');
+    this.authService.loginWithgoogle().then(res => {
+      this.common.loadingDismiss();
+      this.common.toastShow('Logged in', 'success');
       console.log('response', res);
     }).catch(error => {
       console.log('error', error);
+      this.common.loadingDismiss();
+      this.common.toastShow(error.message, 'danger');
     });
   }
 }

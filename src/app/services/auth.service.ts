@@ -6,7 +6,8 @@ import { Facebook, FacebookLoginResponse } from '@ionic-native/facebook/ngx';
   providedIn: 'root'
 })
 export class AuthService {
-
+  isLoggedIn = false;
+  users = { id: '', name: '', email: '', picture: { data: { url: '' } } };
   constructor(
     private fb: Facebook,
     private router: Router,
@@ -28,13 +29,13 @@ export class AuthService {
   isUserLogin() {
     firebase.auth().onAuthStateChanged((user) => {
       if (user) {
-        this.router.navigateByUrl('tabs/tab1');
+        this.router.navigateByUrl('home/tabs/tab1');
       }
     });
   }
 
-  loginWithFaceboo() {
-  return this.fb.login(['public_profile', 'email'])
+  loginWithFacebook() {
+  return this.fb.login(['email'])
   .then((res: FacebookLoginResponse) => {
   // tslint:disable-next-line: variable-name
   const credential_fb = firebase.auth.FacebookAuthProvider.credential(res.authResponse.accessToken);
@@ -42,4 +43,20 @@ export class AuthService {
   console.log('Logged into Facebook!', res); })
   .catch(e => console.log('Error logging into Facebook', e));
   }
+
+  loginWithgoogle() {
+   return firebase.auth().signInWithPopup(new  firebase.auth.GoogleAuthProvider());
+  }
+
+  getUserDetail(userid: any) {
+    this.fb.api('/' + userid + '/?fields=id,email,name,picture', ['public_profile'])
+      .then(res => {
+        console.log(res);
+        this.users = res;
+      })
+      .catch(e => {
+        console.log(e);
+      });
+  }
+
 }
